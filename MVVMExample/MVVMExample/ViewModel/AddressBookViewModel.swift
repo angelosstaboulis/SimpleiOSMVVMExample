@@ -7,8 +7,10 @@
 
 import Foundation
 class AddressBookViewModel{
-    init(model:[AddressBook]) {
-            addressBook = model
+    init(model:[AddressBook]?=nil) {
+        if let getAddressBook = model {
+            addressBook = getAddressBook
+        }
     }
     
     var addressBook:[AddressBook]=[]
